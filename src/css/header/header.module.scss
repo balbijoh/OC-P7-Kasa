@@ -1,0 +1,53 @@
+@import '../global';
+
+.header {
+    &_content {
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 20px;
+        }
+    }
+
+    &_navList {
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 0;
+    
+        li:first-child {
+            margin-right: 64px;
+
+            @media (max-width: 768px) {
+                margin-right: 16px;
+            }
+        }
+    }
+    
+    &_logo {
+    width: 210px;
+    height: 68px;
+
+        @media (max-width: 768px) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+
+    &_navLink {
+        color: $primary;
+        font-size: 24px;
+        font-weight: 500;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

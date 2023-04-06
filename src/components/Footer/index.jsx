@@ -1,48 +1,20 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styled from 'styled-components'
 import FooterLogo from '../../assets/footer-logo.svg'
-import colors from '../../utils/style/colors'
-
-const FooterContainer = styled.footer`
-    background-color: ${colors.backgroundFooter};
-    width: 100%;
-    height: 209px;
-    position: absolute;
-    bottom: 0px;
-`
-
-const DivLogo = styled.div`
-    width: 100%;
-    text-align: center;
-    margin-top: 66px;
-`
-
-const DivText = styled.div`
-    width: 100%;
-    text-align: center;
-    margin-bottom: 29px;
-    color: ${colors.textLight};
-`
-
-const StyledLogo = styled(Image)`
-    width: 122px;
-    height: 40px;
-`
-
+import style from '../../css/footer/footer.module.css'
 
 function Footer() {
     return (
-        <FooterContainer>
-            <DivLogo>
+        <footer className={style.footer_content}>
+            <div className={style.footer_divLogo}>
                 <Link href='/'>
-                    <StyledLogo src={FooterLogo} alt='Logo de Kasa' />
+                    <Image src={FooterLogo} alt='Logo de Kasa' className={style.footer_logo} />
                 </Link>
-            </DivLogo>
-            <DivText>
+            </div>
+            <div className={style.footer_divText}>
                 <p>© 2020 Kasa. All rights reserved</p>
-            </DivText>
-        </FooterContainer>
+            </div>
+        </footer>
     )
 }
 

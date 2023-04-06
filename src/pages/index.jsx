@@ -12,6 +12,7 @@ function Home() {
       <style jsx global>{`
           html {
             font-family: ${fontMontserrat.style.fontFamily};
+            min-width: 330px;
           }
           body {
             margin: 0;
