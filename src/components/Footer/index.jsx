@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import FooterLogo from '../../assets/footer-logo.svg'
-import style from '../../css/footer/footer.module.css'
+import style from '../../css/main.module.css'
 
 function Footer() {
     return (

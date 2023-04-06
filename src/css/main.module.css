@@ -47,4 +47,37 @@
     font-size: 12px;
     font-weight: 500;
   }
-}/*# sourceMappingURL=header.module.css.map */
+}
+
+.footer_content {
+  background-color: #000000;
+  width: 100%;
+  min-width: 330px;
+  height: 209px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.footer_divLogo {
+  width: 100%;
+  text-align: center;
+  margin-top: 66px;
+}
+
+.footer_logo {
+  width: 122px;
+  height: 40px;
+}
+
+.footer_divText {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 29px;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .footer_divText {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=main.module.css.map */

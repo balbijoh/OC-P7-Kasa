@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import HeaderLogo from '../../assets/header-logo.svg'
-import style from '../../css/header/header.module.css'
+import style from '../../css/main.module.css'
 
 function Header() {
     return (
