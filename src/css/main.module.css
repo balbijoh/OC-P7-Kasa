@@ -54,21 +54,17 @@
   width: 100%;
   min-width: 330px;
   height: 209px;
-  position: absolute;
-  bottom: 0px;
 }
-
 .footer_divLogo {
   width: 100%;
   text-align: center;
-  margin-top: 66px;
+  margin-top: 50px;
+  padding-top: 66px;
 }
-
 .footer_logo {
   width: 122px;
   height: 40px;
 }
-
 .footer_divText {
   width: 100%;
   text-align: center;
@@ -79,5 +75,106 @@
 @media (max-width: 768px) {
   .footer_divText {
     font-size: 12px;
+  }
+}
+
+.banner_container {
+  width: 100%;
+  height: 223px;
+  position: relative;
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .banner_container {
+    height: 133px;
+  }
+}
+.banner_image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 50%;
+     object-position: 0% 50%;
+  height: 100%;
+  border-radius: 25px;
+  filter: brightness(65%);
+}
+.banner_text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .banner_text {
+    font-size: 24px;
+    margin: 0 16px;
+  }
+}
+.banner_text p {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0 40px;
+}
+@media (max-width: 768px) {
+  .banner_text p {
+    font-size: 24px;
+    margin: 0 16px;
+  }
+}
+
+.cardsSet_section {
+  margin-top: 40px;
+  padding: 50px;
+  background-color: #F7F7F7;
+  border-radius: 25px;
+}
+.cardsSet_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.card_container {
+  width: 30%;
+  min-width: 280px;
+  height: 340px;
+  margin: 16px 8px;
+  background: linear-gradient(180deg, #FF6060 0%, rgb(100, 45, 45) 100%);
+  border-radius: 10px;
+}
+.card_divImg {
+  width: 96%;
+  height: 75%;
+  margin: 2%;
+}
+.card_img {
+  border-radius: 6px 6px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card_divText {
+  height: 20%;
+  display: flex;
+}
+.card_text {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+  margin: auto 20px;
+}
+
+.content_padding {
+  padding: 0px 100px;
+}
+@media (max-width: 768px) {
+  .content_padding {
+    padding: 0 20px;
   }
 }/*# sourceMappingURL=main.module.css.map */
