@@ -26,9 +26,14 @@ function Banner({ page = 'home' }) {
     return (
         <div className={style.banner_container}>
             <Image src={bannerType()} className={style.banner_image} alt='Image bannière' />
-            <div className={style.banner_text}>
-                <p>Chez vous, partout et ailleurs</p>
-            </div>
+            
+            {page === 'home' ? (
+                <div className={style.banner_text}>
+                    <p>Chez vous, partout et ailleurs</p>
+                </div>
+            ) : (
+                <p></p>
+            )}
         </div>
 
         // <BannerContainer>

@@ -170,6 +170,10 @@
   margin: auto 20px;
 }
 
+.collapse_container {
+  background-color: #FF6060;
+}
+
 .content_padding {
   padding: 0px 100px;
 }

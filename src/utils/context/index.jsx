@@ -1,21 +1,16 @@
-// import { createContext, useState } from 'react'
+import { createContext, useState } from 'react'
 
-// export const BannerContext = createContext()
-// export const BannerProvider = ({ children }) => {
-//     console.log(useState)
-//     const [banner, setBanner] = useState('light')
-//     const getPage = () => {
-//         const url = new URL(window.location.href)
-//         if (url.pathname === '/') {
-//             return "home"
-//         } else {
-//             return "page"
-//         }
-//     }
+export const CollapseContext = createContext()
+export const CollapseProvider = ({ children }) => {
+    console.log(useState)
+    const [collapse, setCollapse] = useState('open')
+    const clickCollapse = () => {
+        setCollapse(collapse === 'open' ? 'close' : 'open')
+    }
  
-//     return (
-//         <BannerContext.Provider value={{ banner, getPage }}>
-//             {children}
-//         </BannerContext.Provider>
-//     )
-// }
+    return (
+        <CollapseContext.Provider value={{ collapse, clickCollapse }}>
+            {children}
+        </CollapseContext.Provider>
+    )
+}

@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
-import CardsSet from '../components/CardsSet'
+
 import style from '../css/main.module.css'
 import { Montserrat } from 'next/font/google'
 
@@ -9,7 +9,7 @@ const fontMontserrat = Montserrat({
   subsets: ['latin'],
 })
 
-function Home() {
+function About() {
   return (
     <>
       <style jsx global>{`
@@ -33,12 +33,12 @@ function Home() {
       </style>
       <Header />
       <main className={style.content_padding}>
-        <Banner page='home' />
-        <CardsSet />
+        <Banner page='about' />
+        
       </main>
       <Footer />
     </>
   )
 }
 
-export default Home
+export default About
