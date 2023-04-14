@@ -3,7 +3,7 @@ import Card from '../Card'
 import style from '../../css/main.module.css'
 
 function CardsSet() {
-	console.log(dwellingsList)
+	// console.log(dwellingsList)
 
 	return (
 		<section className={style.cardsSet_section}>
