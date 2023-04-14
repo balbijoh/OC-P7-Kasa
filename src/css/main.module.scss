@@ -1,3 +1,15 @@
-@import './utils/global.scss';
-@import './header/header.module.scss';
-@import './footer/footer.module.scss';
+@import './utils/variables.scss';
+@import './components/header.module.scss';
+@import './components/footer.module.scss';
+@import './components/banner.module.scss';
+@import './components/cards.module.scss';
+@import './components/collapse.module.scss';
+
+
+.content_padding {
+    padding: 0px 100px;
+
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
+}

@@ -1,5 +1,8 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Banner from '../components/Banner'
+import CardsSet from '../components/CardsSet'
+import style from '../css/main.module.css'
 import { Montserrat } from 'next/font/google'
 
 const fontMontserrat = Montserrat({
@@ -17,6 +20,9 @@ function Home() {
           body {
             margin: 0;
           }
+          main {
+            padding: 0 100px;
+          }          
           a {
             text-decoration: none;
           }
@@ -26,6 +32,10 @@ function Home() {
         `}
       </style>
       <Header />
+      <main className={style.content_padding}>
+        <Banner page='home' />
+        <CardsSet />
+      </main>
       <Footer />
     </>
   )

@@ -15,7 +15,7 @@ function Header() {
                         <Link href='/' className={style.header_navLink}>Accueil</Link>
                     </li>
                     <li>
-                        <Link href='/about' className={style.header_navLink}>A propros</Link>
+                        <Link href='/about' className={style.header_navLink}>A propos</Link>
                     </li>
                 </ul>
             </nav>
