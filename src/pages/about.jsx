@@ -28,6 +28,7 @@ function About() {
           }
           body {
             margin: 0;
+            min-height: 100vh;
           }
           main {
             padding: 0 100px;

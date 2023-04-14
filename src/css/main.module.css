@@ -234,6 +234,47 @@
   height: 0px;
 }
 
+.error_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FF6060;
+  font-weight: 500;
+  text-align: center;
+}
+.error_notFound {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0px;
+}
+@media (max-width: 768px) {
+  .error_notFound {
+    font-size: 96px;
+  }
+}
+.error_text {
+  font-size: 36px;
+  margin: 32px 0;
+}
+@media (max-width: 768px) {
+  .error_text {
+    font-size: 18px;
+  }
+}
+.error_link {
+  font-size: 18px;
+  color: #FF6060;
+  margin-top: 100px;
+}
+.error_link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .error_link {
+    font-size: 14px;
+  }
+}
+
 .content_padding {
   padding: 0px 100px;
 }
