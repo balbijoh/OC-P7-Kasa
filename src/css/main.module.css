@@ -156,7 +156,7 @@
 .card_divImg {
   width: 96%;
   height: 75%;
-  margin: 2%;
+  padding: 2%;
 }
 .card_img {
   border-radius: 6px 6px 0 0;
@@ -232,6 +232,31 @@
 }
 .collapse_content_hide {
   height: 0px;
+}
+
+.carousel_container {
+  position: relative;
+  width: 100%;
+  height: 415px;
+}
+.carousel_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.carousel_arrowsContainer {
+  width: 100%;
+  height: 415px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel_arrow:hover {
+  cursor: pointer;
 }
 
 .error_content {
