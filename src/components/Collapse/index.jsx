@@ -30,7 +30,7 @@ function Collapse({title, content}) {
                 </div>
                 ) : (
                     <div className={style.collapse_content}>
-                        <p>{content}</p>
+                        <div>{content}</div>
                     </div>
                 )}
         </>

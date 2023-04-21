@@ -52,7 +52,7 @@ function About() {
           <section className={style.collapse_section}>        
               {data.map(({ id, title, content }) => ( 
                 <div className={style.collapse_container} key={id} id={id}>
-                  <Collapse title={title} content={content} />
+                  <Collapse title={title} content={<p className={style.collapse_content}>{content}</p>} />
                 </div>
               ))}
           </section>

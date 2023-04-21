@@ -220,15 +220,18 @@
   bottom: 5px;
   border-radius: 0 0 5px 5px;
 }
-.collapse_content p {
+.collapse_content div {
   margin: 32px 16px 16px 16px;
   font-size: 24px;
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .collapse_content p {
+  .collapse_content div {
     font-size: 12px;
   }
+}
+.collapse_content p {
+  margin: 0;
 }
 .collapse_content_hide {
   height: 0px;
@@ -257,6 +260,92 @@
 }
 .carousel_arrow:hover {
   cursor: pointer;
+}
+
+.dwelling_headline {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.dwelling_headlineInfos {
+  margin-right: 64px;
+}
+.dwelling_title {
+  margin: 0;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 36px;
+}
+.dwelling_location {
+  margin: 0;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 18px;
+}
+.dwelling_headlineHost {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+}
+.dwelling_hostName {
+  margin: 0 16px 0 0;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+}
+.dwelling_hostPicture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  background-color: #C4C4C4;
+}
+.dwelling_subline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dwelling_sublineTags {
+  display: flex;
+}
+.dwelling_tagContainer {
+  width: 115px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.dwelling_tagText {
+  margin: 0;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+.dwelling_informations {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.dwelling_informations .collapse_container {
+  width: 45%;
+}
+.dwelling_informations .collapse_container h2 {
+  font-size: 18px;
+}
+.dwelling_informations .collapse_content {
+  min-height: 250px;
+}
+.dwelling_informations .collapse_content p {
+  font-size: 18px;
+  padding: 0;
 }
 
 .error_content {

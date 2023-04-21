@@ -5,7 +5,7 @@ import ArrowForward from '../../assets/icon_arrow-forward.svg'
 import style from '../../css/main.module.css'
 
 function Carousel({dwelling}) {
-    // console.log(dwelling)
+    console.log(dwelling)
     const [dwellingPicture, setDwellingPicture] = useState(0)
 
     function Dwelling_ClickForward() {

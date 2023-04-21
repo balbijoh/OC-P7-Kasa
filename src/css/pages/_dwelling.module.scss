@@ -1,0 +1,102 @@
+.dwelling {
+    &_headline {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+    }
+
+    &_headlineInfos {
+        margin-right: 64px;
+    }
+
+    &_title {
+        margin: 0;
+        color: $primary;
+        font-weight: 500;
+        font-size: 36px;
+    }
+
+    &_location {
+        margin: 0;
+        color: $primary;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &_headlineHost {
+        display: flex;
+        align-items: center;
+        max-width: 200px;
+    }
+
+    &_hostName {
+        margin: 0 16px 0 0;
+        color: $primary;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    &_hostPicture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+        background-color: $backgroundDark;
+    }
+
+    &_subline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_sublineTags {
+        display: flex;
+    }
+
+    &_tagContainer {
+        width: 115px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        background-color: $primary;
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+
+    &_tagText {
+        margin: 0;
+        color: $textLight;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: default;
+    }
+
+    &_informations {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+
+        .collapse_container {
+            width: 45%;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .collapse_content {
+            min-height: 250px;
+
+            p {
+                font-size: 18px;
+                padding: 0;
+            }
+        }
+    }
+}
