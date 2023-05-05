@@ -242,6 +242,11 @@
   width: 100%;
   height: 415px;
 }
+@media (max-width: 768px) {
+  .carousel_container {
+    height: 255px;
+  }
+}
 .carousel_image {
   width: 100%;
   height: 100%;
@@ -258,17 +263,46 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .carousel_arrowsContainer {
+    height: 255px;
+  }
+}
+.carousel_arrow {
+  width: 47px;
+  height: 80px;
+  margin: 24px;
+}
 .carousel_arrow:hover {
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .carousel_arrow {
+    width: 12px;
+    height: 20px;
+  }
 }
 
 .dwelling_headline {
   display: flex;
   justify-content: space-between;
   margin: 30px 0;
+  height: 120px;
+}
+@media (max-width: 768px) {
+  .dwelling_headline {
+    height: auto;
+    flex-direction: column;
+  }
 }
 .dwelling_headlineInfos {
   margin-right: 64px;
+  display: grid;
+}
+@media (max-width: 768px) {
+  .dwelling_headlineInfos {
+    margin-right: 0;
+  }
 }
 .dwelling_title {
   margin: 0;
@@ -276,16 +310,38 @@
   font-weight: 500;
   font-size: 36px;
 }
+@media (max-width: 768px) {
+  .dwelling_title {
+    font-size: 18px;
+  }
+}
 .dwelling_location {
   margin: 0;
   color: #FF6060;
   font-weight: 500;
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .dwelling_location {
+    font-size: 14px;
+  }
+}
 .dwelling_headlineHost {
+  display: grid;
+  align-items: baseline;
+  min-width: 180px;
+}
+@media (max-width: 768px) {
+  .dwelling_headlineHost {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.dwelling_hostIdentity {
   display: flex;
   align-items: center;
-  max-width: 200px;
+  justify-content: end;
 }
 .dwelling_hostName {
   margin: 0 16px 0 0;
@@ -300,13 +356,10 @@
   border-radius: 50px;
   background-color: #C4C4C4;
 }
-.dwelling_subline {
+.dwelling_tags {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.dwelling_sublineTags {
-  display: flex;
+  flex-wrap: wrap;
+  align-self: end;
 }
 .dwelling_tagContainer {
   width: 115px;
@@ -314,7 +367,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  margin: 0 10px 8px 0;
   background-color: #FF6060;
   border-radius: 10px;
   padding: 0 5px;
@@ -329,19 +382,37 @@
   text-overflow: ellipsis;
   cursor: default;
 }
+.dwelling_ratings {
+  align-self: end;
+}
 .dwelling_informations {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .dwelling_informations {
+    flex-direction: column;
+  }
+}
 .dwelling_informations .collapse_container {
   width: 45%;
+}
+@media (max-width: 768px) {
+  .dwelling_informations .collapse_container {
+    width: 100%;
+  }
 }
 .dwelling_informations .collapse_container h2 {
   font-size: 18px;
 }
 .dwelling_informations .collapse_content {
   min-height: 250px;
+}
+@media (max-width: 768px) {
+  .dwelling_informations .collapse_content {
+    min-height: 150px;
+  }
 }
 .dwelling_informations .collapse_content p {
   font-size: 18px;
