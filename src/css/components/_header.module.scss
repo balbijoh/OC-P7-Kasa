@@ -14,6 +14,10 @@
         display: flex;
         justify-content: space-between;
         padding-inline-start: 0;
+
+        @media (max-width: 768px) {
+            text-transform: uppercase;
+        }
     
         li:first-child {
             margin-right: 64px;
