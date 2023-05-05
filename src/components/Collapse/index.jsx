@@ -7,6 +7,7 @@ import style from '../../css/main.module.css'
 function Collapse({title, content}) {
     const [collapse, setCollapse] = useState('closed')
 
+    // Gère l'état de l'expansion panel
     function handleClick(e) {
         if (collapse === 'closed') {
             setCollapse('opened')

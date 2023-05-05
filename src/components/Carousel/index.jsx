@@ -7,6 +7,7 @@ import style from '../../css/main.module.css'
 function Carousel({dwelling}) {
     const [dwellingPicture, setDwellingPicture] = useState(0)
 
+    // Gère le click sur la flèche "Image suivante"
     function Dwelling_ClickForward() {
         if (dwellingPicture < dwelling.pictures.length-1) {
             setDwellingPicture(dwellingPicture+1)
@@ -17,6 +18,7 @@ function Carousel({dwelling}) {
         }
     }
 
+    // Gère le click sur la flèche "Image précédente"
     function Dwelling_ClickPrevious() {
         if (dwellingPicture > 0) {
             setDwellingPicture(dwellingPicture-1)
@@ -30,7 +32,6 @@ function Carousel({dwelling}) {
     return (
         <div className={style.carousel_container}>
             <img src={dwelling.pictures[dwellingPicture]} alt='Photo du logement' className={style.carousel_image} />
-            {/* <div className={style.carousel_arrowsContainer}> */}
             <div className={dwelling.pictures.length == 1 ? style.carousel_arrowsHidden : style.carousel_arrowsContainer}>
                 <Image className={style.carousel_arrow}
                         src={ArrowBack}

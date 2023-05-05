@@ -4,6 +4,7 @@ import HomeBanner from '../../assets/home-banner.png'
 import AboutBanner from '../../assets/about-banner.png'
 
 function Banner({ page = 'home' }) {
+    // Indique le type de bannière selon la page
     const bannerType = () => {
         if (page === 'home') {
             return HomeBanner
