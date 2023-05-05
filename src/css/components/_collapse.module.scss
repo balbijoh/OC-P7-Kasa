@@ -46,7 +46,7 @@
         bottom: 5px;
         border-radius: 0 0 5px 5px;
 
-        p {
+        div {
             margin: 32px 16px 16px 16px;
             font-size: 24px;
             font-weight: 400;
@@ -54,6 +54,10 @@
             @media (max-width: 768px) {
                 font-size: 12px;
             }
+        }
+
+        p {
+            margin: 0;
         }
 
         &_hide {

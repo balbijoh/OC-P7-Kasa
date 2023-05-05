@@ -156,7 +156,7 @@
 .card_divImg {
   width: 96%;
   height: 75%;
-  margin: 2%;
+  padding: 2%;
 }
 .card_img {
   border-radius: 6px 6px 0 0;
@@ -220,18 +220,203 @@
   bottom: 5px;
   border-radius: 0 0 5px 5px;
 }
-.collapse_content p {
+.collapse_content div {
   margin: 32px 16px 16px 16px;
   font-size: 24px;
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .collapse_content p {
+  .collapse_content div {
     font-size: 12px;
   }
 }
+.collapse_content p {
+  margin: 0;
+}
 .collapse_content_hide {
   height: 0px;
+}
+
+.carousel_container {
+  position: relative;
+  width: 100%;
+  height: 415px;
+}
+@media (max-width: 768px) {
+  .carousel_container {
+    height: 255px;
+  }
+}
+.carousel_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.carousel_arrowsContainer {
+  width: 100%;
+  height: 415px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .carousel_arrowsContainer {
+    height: 255px;
+  }
+}
+.carousel_arrow {
+  width: 47px;
+  height: 80px;
+  margin: 24px;
+}
+.carousel_arrow:hover {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .carousel_arrow {
+    width: 12px;
+    height: 20px;
+  }
+}
+
+.dwelling_headline {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  height: 120px;
+}
+@media (max-width: 768px) {
+  .dwelling_headline {
+    height: auto;
+    flex-direction: column;
+  }
+}
+.dwelling_headlineInfos {
+  margin-right: 64px;
+  display: grid;
+}
+@media (max-width: 768px) {
+  .dwelling_headlineInfos {
+    margin-right: 0;
+  }
+}
+.dwelling_title {
+  margin: 0;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 36px;
+}
+@media (max-width: 768px) {
+  .dwelling_title {
+    font-size: 18px;
+  }
+}
+.dwelling_location {
+  margin: 0;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .dwelling_location {
+    font-size: 14px;
+  }
+}
+.dwelling_headlineHost {
+  display: grid;
+  align-items: baseline;
+  min-width: 180px;
+}
+@media (max-width: 768px) {
+  .dwelling_headlineHost {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.dwelling_hostIdentity {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.dwelling_hostName {
+  margin: 0 16px 0 0;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+}
+.dwelling_hostPicture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  background-color: #C4C4C4;
+}
+.dwelling_tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: end;
+}
+.dwelling_tagContainer {
+  width: 115px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 8px 0;
+  background-color: #FF6060;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.dwelling_tagText {
+  margin: 0;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+.dwelling_ratings {
+  align-self: end;
+}
+.dwelling_informations {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .dwelling_informations {
+    flex-direction: column;
+  }
+}
+.dwelling_informations .collapse_container {
+  width: 45%;
+}
+@media (max-width: 768px) {
+  .dwelling_informations .collapse_container {
+    width: 100%;
+  }
+}
+.dwelling_informations .collapse_container h2 {
+  font-size: 18px;
+}
+.dwelling_informations .collapse_content {
+  min-height: 250px;
+}
+@media (max-width: 768px) {
+  .dwelling_informations .collapse_content {
+    min-height: 150px;
+  }
+}
+.dwelling_informations .collapse_content p {
+  font-size: 18px;
+  padding: 0;
 }
 
 .error_content {

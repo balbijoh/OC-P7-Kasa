@@ -1,0 +1,145 @@
+.dwelling {
+    &_headline {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        height: 120px;
+
+        @media (max-width: 768px) {
+            height: auto;
+            flex-direction: column;
+        }
+    }
+
+    &_headlineInfos {
+        margin-right: 64px;
+        display: grid;
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+    }
+
+    &_title {
+        margin: 0;
+        color: $primary;
+        font-weight: 500;
+        font-size: 36px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
+    }
+
+    &_location {
+        margin: 0;
+        color: $primary;
+        font-weight: 500;
+        font-size: 18px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    &_headlineHost {
+        display: grid;
+        align-items: baseline;
+        min-width: 180px;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content:  space-between;
+        }
+    }
+
+    &_hostIdentity {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    &_hostName {
+        margin: 0 16px 0 0;
+        color: $primary;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    &_hostPicture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+        background-color: $backgroundDark;
+    }
+
+    &_tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-self: end;
+    }
+
+    &_tagContainer {
+        width: 115px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px 8px 0;
+        background-color: $primary;
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+
+    &_tagText {
+        margin: 0;
+        color: $textLight;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: default;
+    }
+
+    &_ratings {
+        align-self: end;
+    }
+
+    &_informations {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .collapse_container {
+            width: 45%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .collapse_content {
+            min-height: 250px;
+
+            @media (max-width: 768px) {
+                min-height: 150px;
+            }
+
+            p {
+                font-size: 18px;
+                padding: 0;
+            }
+        }
+    }
+}
