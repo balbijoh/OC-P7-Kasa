@@ -28,14 +28,10 @@
     margin-right: 16px;
   }
 }
-.header_logo {
-  width: 210px;
-  height: 68px;
-}
 @media (max-width: 768px) {
   .header_logo {
     width: 145px;
-    height: 47px;
+    height: auto;
   }
 }
 .header_navLink {
@@ -319,9 +315,10 @@
     height: 255px;
   }
 }
+.carousel_arrowsHidden {
+  display: none;
+}
 .carousel_arrow {
-  width: 47px;
-  height: 80px;
   margin: 24px;
 }
 .carousel_arrow:hover {
@@ -395,7 +392,7 @@
 .dwelling_hostIdentity {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .dwelling_hostName {
   margin: 0 16px 0 0;
@@ -467,7 +464,7 @@
 .dwelling_ratings {
   align-self: end;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .dwelling_starActive, .dwelling_starInactive {
   width: 25px;

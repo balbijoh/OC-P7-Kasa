@@ -60,7 +60,7 @@
     &_hostIdentity {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     &_hostName {
@@ -133,7 +133,7 @@
     &_ratings {
         align-self: end;
         display:flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     &_starActive, &_starInactive {

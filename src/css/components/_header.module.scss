@@ -29,12 +29,9 @@
     }
     
     &_logo {
-    width: 210px;
-    height: 68px;
-
         @media (max-width: 768px) {
             width: 145px;
-            height: 47px;
+            height: auto;
         }
     }
 

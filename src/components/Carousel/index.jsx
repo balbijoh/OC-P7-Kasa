@@ -5,7 +5,6 @@ import ArrowForward from '../../assets/icon_arrow-forward.svg'
 import style from '../../css/main.module.css'
 
 function Carousel({dwelling}) {
-    console.log(dwelling)
     const [dwellingPicture, setDwellingPicture] = useState(0)
 
     function Dwelling_ClickForward() {
@@ -31,7 +30,8 @@ function Carousel({dwelling}) {
     return (
         <div className={style.carousel_container}>
             <img src={dwelling.pictures[dwellingPicture]} alt='Photo du logement' className={style.carousel_image} />
-            <div className={style.carousel_arrowsContainer}>
+            {/* <div className={style.carousel_arrowsContainer}> */}
+            <div className={dwelling.pictures.length == 1 ? style.carousel_arrowsHidden : style.carousel_arrowsContainer}>
                 <Image className={style.carousel_arrow}
                         src={ArrowBack}
                         alt='Image précédente'

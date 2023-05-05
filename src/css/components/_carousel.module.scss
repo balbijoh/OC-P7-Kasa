@@ -30,9 +30,11 @@
         }
     }
 
+    &_arrowsHidden {
+        display: none;
+    }
+
     &_arrow {
-        width: 47px;
-        height: 80px;
         margin: 24px;
 
         &:hover {

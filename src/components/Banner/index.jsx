@@ -14,7 +14,7 @@ function Banner({ page = 'home' }) {
 
     return (
         <div className={bannerType() == HomeBanner ? style.banner_homeContainer : style.banner_aboutContainer}>
-            <Image src={bannerType()} className={style.banner_image} alt='Image bannière' />
+            <Image src={bannerType()} className={style.banner_image} alt='Image bannière' priority={true} />
 
             {page === 'home' ? (
                 <div className={style.banner_text}>
