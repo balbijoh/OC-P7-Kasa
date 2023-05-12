@@ -164,6 +164,7 @@
 @media (max-width: 768px) {
   .cardsSet_list {
     justify-content: center;
+    gap: 0;
   }
 }
 
@@ -175,16 +176,22 @@
   background: linear-gradient(180deg, #FF6060 0%, rgb(100, 45, 45) 100%);
   border-radius: 10px;
 }
+@media (max-width: 870px) {
+  .card_container {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .card_container {
     width: 100%;
     margin: 20px 0;
+    height: 255px;
   }
 }
 .card_divImg {
   width: 96%;
   height: 75%;
-  padding: 2%;
+  padding: 2% 2% 0 2%;
 }
 .card_img {
   border-radius: 6px 6px 0 0;
@@ -232,6 +239,7 @@
   border-radius: 5px;
   padding-left: 16px;
   z-index: 1;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .collapse_bar {

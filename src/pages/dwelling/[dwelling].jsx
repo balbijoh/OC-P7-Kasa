@@ -31,7 +31,7 @@ function Dwelling() {
 
     if (!isLoading) {
         // Redirige vers la page 404 si le logement est introuvable
-        if (!data.find(d => d.id === queryParams.dwelling)) {
+        if (!data.some(d => d.id === queryParams.dwelling)) {
             return <Error />
         }
 

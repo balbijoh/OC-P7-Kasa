@@ -18,12 +18,11 @@ function Collapse({title, content}) {
     
     return (
         <>
-            <div className={style.collapse_bar}>
+            <div className={style.collapse_bar} onClick={() => handleClick()}>
                 <h2>{title}</h2>
                     <Image src={collapse === 'closed' ? ArrowDown : ArrowUp}
                         className={style.collapse_icon}
-                        alt={`Afficher/masquer le contenu`}
-                        onClick={() => handleClick()} />
+                        alt={`Afficher/masquer le contenu`} />
             </div>
             
             {collapse === 'closed' ? (
