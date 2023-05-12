@@ -7,6 +7,7 @@ import style from '../../css/main.module.css'
 function Collapse({title, content}) {
     const [collapse, setCollapse] = useState('closed')
 
+    // Gère l'état de l'expansion panel
     function handleClick(e) {
         if (collapse === 'closed') {
             setCollapse('opened')
@@ -17,12 +18,11 @@ function Collapse({title, content}) {
     
     return (
         <>
-            <div className={style.collapse_bar}>
+            <div className={style.collapse_bar} onClick={() => handleClick()}>
                 <h2>{title}</h2>
                     <Image src={collapse === 'closed' ? ArrowDown : ArrowUp}
                         className={style.collapse_icon}
-                        alt={`Afficher/masquer le contenu`}
-                        onClick={() => handleClick()} />
+                        alt={`Afficher/masquer le contenu`} />
             </div>
             
             {collapse === 'closed' ? (

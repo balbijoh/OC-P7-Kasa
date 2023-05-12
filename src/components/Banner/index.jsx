@@ -1,20 +1,10 @@
 import Image from 'next/image'
 import style from '../../css/main.module.css'
-// import styled from 'styled-components'
 import HomeBanner from '../../assets/home-banner.png'
 import AboutBanner from '../../assets/about-banner.png'
-// useRouter from next/router ? https://nextjs.org/docs/api-reference/next/router
-
-
-// const BannerContainer = styled.div`
-//     width: 100%;
-//     height: 223px;
-//     position: relative;
-//     text-align: center;
-//     color: white;
-// `
 
 function Banner({ page = 'home' }) {
+    // Indique le type de bannière selon la page
     const bannerType = () => {
         if (page === 'home') {
             return HomeBanner
@@ -24,9 +14,9 @@ function Banner({ page = 'home' }) {
     }
 
     return (
-        <div className={style.banner_container}>
-            <Image src={bannerType()} className={style.banner_image} alt='Image bannière' />
-            
+        <div className={bannerType() == HomeBanner ? style.banner_homeContainer : style.banner_aboutContainer}>
+            <Image src={bannerType()} className={style.banner_image} alt='Image bannière' priority={true} />
+
             {page === 'home' ? (
                 <div className={style.banner_text}>
                     <p>Chez vous, partout et ailleurs</p>
@@ -35,11 +25,6 @@ function Banner({ page = 'home' }) {
                 <p></p>
             )}
         </div>
-
-        // <BannerContainer>
-        //     <BannerImage src={getPage() === 'home' ? HomeBanner : AboutBanner} alt='Image bannière' />
-        //     <BannerText>Chez vous, partout et ailleurs</BannerText>
-        // </BannerContainer>
     )
 }
 

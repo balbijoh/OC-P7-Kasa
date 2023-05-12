@@ -19,6 +19,8 @@ function Dwelling() {
     const { data, isLoading, error } = useFetch(
         `../../datas/dwellings.json`
     )
+
+    // Restitue le logement souhaité selon le paramètre renseigné dans l'URL
     const dwelling = () => {
         return data.find(d => d.id === queryParams.dwelling)
     }
@@ -28,7 +30,8 @@ function Dwelling() {
 	}
 
     if (!isLoading) {
-        if (!data.find(d => d.id === queryParams.dwelling)) {
+        // Redirige vers la page 404 si le logement est introuvable
+        if (!data.some(d => d.id === queryParams.dwelling)) {
             return <Error />
         }
 
@@ -111,89 +114,6 @@ function Dwelling() {
             </>
         )
     }
-
-    // return (
-    //     <>
-    //     <style jsx global>{`
-    //         html {
-    //             font-family: ${fontMontserrat.style.fontFamily};
-    //             min-width: 330px;
-    //         }
-    //         body {
-    //             margin: 0;
-    //             min-height: 100vh;
-    //         }
-    //         main {
-    //             padding: 0 100px;
-    //         }          
-    //         a {
-    //             text-decoration: none;
-    //         }
-    //         ul {
-    //             list-style: none;
-    //         }
-    //         `}
-    //     </style>
-
-    //     <Header />
-    //     {isLoading ? (
-    //         <></>
-    //     ) : (
-    //         <main className={style.content_padding}>
-    //             {/**** Carrousel ****/}
-    //             <Carousel dwelling={dwelling()}/>
-
-    //             {/**** Bandeau-titre du logement ****/}
-    //             <div className={style.dwelling_headline}>
-    //                 <div className={style.dwelling_headlineInfos}>
-    //                     <div>
-    //                         <h1 className={style.dwelling_title}>{dwelling().title}</h1>
-    //                         <p className={style.dwelling_location}>{dwelling().location}</p>
-    //                     </div>
-    //                     <div className={style.dwelling_tags}>
-    //                         {dwelling().tags.map((tag, index) => {
-    //                             return (
-    //                                 <div className={style.dwelling_tagContainer} key={index} title={tag}>
-    //                                     <p className={style.dwelling_tagText}>{tag}</p>
-    //                                 </div>
-    //                             )                            
-    //                         })}
-    //                     </div>
-    //                 </div>
-    //                 <div className={style.dwelling_headlineHost}>
-    //                     <div className={style.dwelling_hostIdentity}>
-    //                         <div>
-    //                             <p className={style.dwelling_hostName}>{dwelling().host.name.split(' ')[0]}</p>
-    //                             <p className={style.dwelling_hostName}>{dwelling().host.name.split(' ')[1]}</p>
-    //                         </div>
-    //                         <img className={style.dwelling_hostPicture}
-    //                                 src={dwelling().host.picture}
-    //                                 alt="Photo de l'hôte" />
-    //                     </div>
-    //                     <div className={style.dwelling_ratings}>
-    //                         <Rating rating={dwelling().rating} />
-    //                     </div>
-    //                 </div>
-    //             </div>
-
-    //             {/**** Informations du logement ****/}
-    //             <div className={style.dwelling_informations}>
-    //                 <div className={style.collapse_container}>
-    //                     <Collapse title='Description' content={<p className={style.dwelling_equipmentText}>{dwelling().description}</p>} />
-    //                 </div>
-    //                 <div className={style.collapse_container}>
-    //                     <Collapse title='Equipements' content={dwelling().equipments.map((equipment, index) => {
-    //                         return (
-    //                             <p key={index} className={style.dwelling_equipmentText}>{equipment}</p>
-    //                         )
-    //                     })} />
-    //                 </div>
-    //             </div>
-    //         </main>
-    //     )} 
-    //     <Footer />
-    //     </>
-    // )
 }
 
 export default Dwelling

@@ -15,6 +15,11 @@
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
+@media (max-width: 768px) {
+  .header_navList {
+    text-transform: uppercase;
+  }
+}
 .header_navList li:first-child {
   margin-right: 64px;
 }
@@ -23,14 +28,10 @@
     margin-right: 16px;
   }
 }
-.header_logo {
-  width: 210px;
-  height: 68px;
-}
 @media (max-width: 768px) {
   .header_logo {
     width: 145px;
-    height: 47px;
+    height: auto;
   }
 }
 .header_navLink {
@@ -79,7 +80,7 @@
   }
 }
 
-.banner_container {
+.banner_homeContainer {
   width: 100%;
   height: 223px;
   position: relative;
@@ -87,9 +88,17 @@
   color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  .banner_container {
+  .banner_homeContainer {
     height: 133px;
+    text-align: left;
   }
+}
+.banner_aboutContainer {
+  width: 100%;
+  height: 223px;
+  position: relative;
+  text-align: center;
+  color: #FFFFFF;
 }
 .banner_image {
   width: 100%;
@@ -116,7 +125,7 @@
 @media (max-width: 768px) {
   .banner_text {
     font-size: 24px;
-    margin: 0 16px;
+    margin: 0;
   }
 }
 .banner_text p {
@@ -133,16 +142,30 @@
 
 .cardsSet_section {
   margin-top: 40px;
-  padding: 50px;
+  padding: 3%;
   background-color: #F7F7F7;
   border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .cardsSet_section {
+    margin-top: 16px;
+    padding: 0;
+    background-color: transparent;
+  }
 }
 .cardsSet_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 20px;
   padding: 0;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .cardsSet_list {
+    justify-content: center;
+    gap: 0;
+  }
 }
 
 .card_container {
@@ -153,10 +176,22 @@
   background: linear-gradient(180deg, #FF6060 0%, rgb(100, 45, 45) 100%);
   border-radius: 10px;
 }
+@media (max-width: 870px) {
+  .card_container {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card_container {
+    width: 100%;
+    margin: 20px 0;
+    height: 255px;
+  }
+}
 .card_divImg {
   width: 96%;
   height: 75%;
-  padding: 2%;
+  padding: 2% 2% 0 2%;
 }
 .card_img {
   border-radius: 6px 6px 0 0;
@@ -189,6 +224,11 @@
   flex-direction: column;
   margin: 32px 0;
 }
+@media (max-width: 768px) {
+  .collapse_container {
+    margin: 20px 0;
+  }
+}
 .collapse_bar {
   display: flex;
   align-items: center;
@@ -199,6 +239,12 @@
   border-radius: 5px;
   padding-left: 16px;
   z-index: 1;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .collapse_bar {
+    height: 30px;
+  }
 }
 .collapse_bar h2 {
   font-weight: 500;
@@ -212,6 +258,14 @@
 .collapse_icon {
   padding-right: 16px;
   cursor: pointer;
+  width: 24px;
+  height: 14px;
+}
+@media (max-width: 768px) {
+  .collapse_icon {
+    width: 16px;
+    height: 9px;
+  }
 }
 .collapse_content {
   background-color: #F7F7F7;
@@ -227,6 +281,7 @@
 }
 @media (max-width: 768px) {
   .collapse_content div {
+    margin: 32px 16px 32px 16px;
     font-size: 12px;
   }
 }
@@ -268,9 +323,10 @@
     height: 255px;
   }
 }
+.carousel_arrowsHidden {
+  display: none;
+}
 .carousel_arrow {
-  width: 47px;
-  height: 80px;
   margin: 24px;
 }
 .carousel_arrow:hover {
@@ -287,10 +343,11 @@
   display: flex;
   justify-content: space-between;
   margin: 30px 0;
-  height: 120px;
+  height: 150px;
 }
 @media (max-width: 768px) {
   .dwelling_headline {
+    margin: 15px 0;
     height: auto;
     flex-direction: column;
   }
@@ -323,25 +380,27 @@
 }
 @media (max-width: 768px) {
   .dwelling_location {
+    margin: 8px 0;
     font-size: 14px;
   }
 }
 .dwelling_headlineHost {
   display: grid;
   align-items: baseline;
-  min-width: 180px;
+  min-width: 210px;
 }
 @media (max-width: 768px) {
   .dwelling_headlineHost {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-top: 16px;
   }
 }
 .dwelling_hostIdentity {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .dwelling_hostName {
   margin: 0 16px 0 0;
@@ -350,16 +409,32 @@
   font-size: 18px;
   text-align: right;
 }
+@media (max-width: 768px) {
+  .dwelling_hostName {
+    font-size: 12px;
+  }
+}
 .dwelling_hostPicture {
   width: 64px;
   height: 64px;
   border-radius: 50px;
   background-color: #C4C4C4;
 }
+@media (max-width: 768px) {
+  .dwelling_hostPicture {
+    width: 32px;
+    height: 32px;
+  }
+}
 .dwelling_tags {
   display: flex;
   flex-wrap: wrap;
   align-self: end;
+}
+@media (max-width: 768px) {
+  .dwelling_tags {
+    margin-top: 4px;
+  }
 }
 .dwelling_tagContainer {
   width: 115px;
@@ -367,10 +442,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10px 8px 0;
+  margin: 0 10px 4px 0;
   background-color: #FF6060;
   border-radius: 10px;
   padding: 0 5px;
+}
+@media (max-width: 768px) {
+  .dwelling_tagContainer {
+    width: 84px;
+    height: 18px;
+    border-radius: 5px;
+  }
 }
 .dwelling_tagText {
   margin: 0;
@@ -382,13 +464,31 @@
   text-overflow: ellipsis;
   cursor: default;
 }
+@media (max-width: 768px) {
+  .dwelling_tagText {
+    font-size: 10px;
+  }
+}
 .dwelling_ratings {
   align-self: end;
+  display: flex;
+  justify-content: flex-end;
+}
+.dwelling_star {
+  width: 25px;
+  height: 24px;
+  margin: 8px;
+}
+@media (max-width: 768px) {
+  .dwelling_star {
+    width: 14px;
+    height: 13px;
+    margin: 3px;
+  }
 }
 .dwelling_informations {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
 }
 @media (max-width: 768px) {
   .dwelling_informations {
@@ -401,22 +501,33 @@
 @media (max-width: 768px) {
   .dwelling_informations .collapse_container {
     width: 100%;
+    margin: 10px 0;
   }
 }
 .dwelling_informations .collapse_container h2 {
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .dwelling_informations .collapse_container h2 {
+    font-size: 13px;
+  }
 }
 .dwelling_informations .collapse_content {
   min-height: 250px;
 }
 @media (max-width: 768px) {
   .dwelling_informations .collapse_content {
-    min-height: 150px;
+    min-height: 100px;
   }
 }
 .dwelling_informations .collapse_content p {
   font-size: 18px;
   padding: 0;
+}
+@media (max-width: 768px) {
+  .dwelling_informations .collapse_content p {
+    font-size: 12px;
+  }
 }
 
 .error_content {

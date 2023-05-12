@@ -6,19 +6,19 @@ import style from '../../css/main.module.css'
 function Rating({rating}) {
     return (
         <>
-            <Image className={style.dwelling_starActive}
+            <Image className={style.dwelling_star}
                     src={rating >= 1 ? StarActive : StarInactive}
                     alt='Icone de notation' />
-            <Image className={style.dwelling_starInactive}
+            <Image className={style.dwelling_star}
                     src={rating >= 2 ? StarActive : StarInactive}
                     alt='Icone de notation' />
-            <Image className={style.dwelling_starInactive}
+            <Image className={style.dwelling_star}
                     src={rating >= 3 ? StarActive : StarInactive}
                     alt='Icone de notation' />
-            <Image className={style.dwelling_starInactive}
+            <Image className={style.dwelling_star}
                     src={rating >= 4 ? StarActive : StarInactive}
                     alt='Icone de notation' />
-            <Image className={style.dwelling_starInactive}
+            <Image className={style.dwelling_star}
                     src={rating >= 5 ? StarActive : StarInactive}
                     alt='Icone de notation' />
         </>

@@ -1,17 +1,30 @@
 .cardsSet {
     &_section {
         margin-top: 40px;
-        padding: 50px;
+        // padding: 50px;
+        padding: 3%;
         background-color: $backgroundLight;
         border-radius: 25px;
+
+        @media (max-width: 768px) {
+            margin-top: 16px;
+            padding: 0;
+            background-color: transparent;
+        }
     }
 
     &_list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        gap: 20px;
         padding: 0;
         margin: 0;
+
+        @media (max-width: 768px) {
+            justify-content: center;            
+            gap: 0;
+        }
     }
 }
 
@@ -23,12 +36,22 @@
         margin: 16px 8px;
         background: linear-gradient(180deg, $primary 0%, $gradientCard 100%);
         border-radius: 10px;
+
+        @media (max-width: 870px) {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin: 20px 0;
+            height: 255px;
+        }
     }
 
     &_divImg {
         width: 96%;
         height: 75%;
-        padding: 2%;
+        padding: 2% 2% 0 2%;
     }
 
     &_img {
