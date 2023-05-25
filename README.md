@@ -9,12 +9,15 @@
 ## Prérequis
 
 Projet réalisé avec React et Next.js. <br>
-Pour démarrer le projet, saisissez la commande :
+Téléchargez/clonez le repository puis saisissez la commande :
+```bash
+npm add next
+```
 
+Pour démarrer le projet, saisissez la commande :
 ```bash
 npm run dev
 ```
-
 Ouvrez le navigateur sur le port [http://localhost:3000](http://localhost:3000) pour voir le résultat.
 
 ## Scenario
