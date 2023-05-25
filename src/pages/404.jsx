@@ -1,13 +1,12 @@
+import { Montserrat } from 'next/font/google'
 import Link from 'next/link'
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+
 import style from '../css/main.module.css'
-import { Montserrat } from 'next/font/google'
 
-const fontMontserrat = Montserrat({
-  subsets: ['latin'],
-})
-
+const fontMontserrat = Montserrat({ subsets: ['latin'] })
 
 function Error404() {
   return (

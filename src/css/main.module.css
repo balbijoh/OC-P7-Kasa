@@ -288,9 +288,6 @@
 .collapse_content p {
   margin: 0;
 }
-.collapse_content_hide {
-  height: 0px;
-}
 
 .carousel_container {
   position: relative;

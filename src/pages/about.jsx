@@ -1,22 +1,49 @@
+import { Montserrat } from 'next/font/google'
+
 import { useFetch } from '../utils/hooks'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
+import AboutBanner from '../assets/about-banner.png'
 
 import style from '../css/main.module.css'
-import { Montserrat } from 'next/font/google'
 
-const fontMontserrat = Montserrat({
-  subsets: ['latin'],
-})
-
+const fontMontserrat = Montserrat({ subsets: ['latin'] })
 
 function About() {
   const { data, isLoading, error } = useFetch(`./datas/collapses.json`)
 
   if (error) {
-		return <span>Une erreur est survenue. Merci de réessayer ultérieurement.</span>
+    return (
+      <>
+        <style jsx global>{`
+            html {
+                font-family: ${fontMontserrat.style.fontFamily};
+                min-width: 330px;
+            }
+            body {
+                margin: 0;
+                min-height: 100vh;
+            }
+            main {
+                padding: 0 100px;
+            }          
+            a {
+                text-decoration: none;
+            }
+            ul {
+                list-style: none;
+            }
+            `}
+        </style>
+        <Header />
+        <main>
+            <span>Une erreur est survenue. Merci de réessayer ultérieurement.</span>
+        </main>
+        <Footer />
+      </>
+    )  
 	}
 
   return (
@@ -44,7 +71,7 @@ function About() {
 
       <Header />
       <main className={style.content_padding}>
-        <Banner page='about' />
+        <Banner src={AboutBanner} pageClass={style.banner_aboutContainer} />
 
         {isLoading ? (
           <></>
