@@ -1,5 +1,3 @@
-import { Montserrat } from 'next/font/google'
-
 import { useFetch } from '../utils/hooks'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -9,34 +7,12 @@ import AboutBanner from '../assets/about-banner.png'
 
 import style from '../css/main.module.css'
 
-const fontMontserrat = Montserrat({ subsets: ['latin'] })
-
 function About() {
   const { data, isLoading, error } = useFetch(`./datas/collapses.json`)
 
   if (error) {
     return (
       <>
-        <style jsx global>{`
-            html {
-                font-family: ${fontMontserrat.style.fontFamily};
-                min-width: 330px;
-            }
-            body {
-                margin: 0;
-                min-height: 100vh;
-            }
-            main {
-                padding: 0 100px;
-            }          
-            a {
-                text-decoration: none;
-            }
-            ul {
-                list-style: none;
-            }
-            `}
-        </style>
         <Header />
         <main>
             <span>Une erreur est survenue. Merci de réessayer ultérieurement.</span>
@@ -48,27 +24,6 @@ function About() {
 
   return (
     <>
-      <style jsx global>{`
-          html {
-            font-family: ${fontMontserrat.style.fontFamily};
-            min-width: 330px;
-          }
-          body {
-            margin: 0;
-            min-height: 100vh;
-          }
-          main {
-            padding: 0 100px;
-          }          
-          a {
-            text-decoration: none;
-          }
-          ul {
-            list-style: none;
-          }
-        `}
-      </style>
-
       <Header />
       <main className={style.content_padding}>
         <Banner src={AboutBanner} pageClass={style.banner_aboutContainer} />

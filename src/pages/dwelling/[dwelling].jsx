@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { Montserrat } from 'next/font/google'
 
 import { useFetch } from '../../utils/hooks'
 import Header from '../../components/Header'
@@ -10,8 +9,6 @@ import Collapse from '../../components/Collapse'
 import Error from '../../pages/404'
 
 import style from '../../css/main.module.css'
-
-const fontMontserrat = Montserrat({ subsets: ['latin'] })
 
 function Dwelling() {
     const router = useRouter()
@@ -26,26 +23,6 @@ function Dwelling() {
     if (error) {
 		return (
             <>
-                <style jsx global>{`
-                    html {
-                        font-family: ${fontMontserrat.style.fontFamily};
-                        min-width: 330px;
-                    }
-                    body {
-                        margin: 0;
-                        min-height: 100vh;
-                    }
-                    main {
-                        padding: 0 100px;
-                    }          
-                    a {
-                        text-decoration: none;
-                    }
-                    ul {
-                        list-style: none;
-                    }
-                    `}
-                </style>
                 <Header />
                 <main>
                     <span>Une erreur est survenue. Merci de réessayer ultérieurement.</span>
@@ -63,27 +40,6 @@ function Dwelling() {
 
         return (
             <>
-            <style jsx global>{`
-                html {
-                    font-family: ${fontMontserrat.style.fontFamily};
-                    min-width: 330px;
-                }
-                body {
-                    margin: 0;
-                    min-height: 100vh;
-                }
-                main {
-                    padding: 0 100px;
-                }          
-                a {
-                    text-decoration: none;
-                }
-                ul {
-                    list-style: none;
-                }
-                `}
-            </style>
-    
             <Header />
                 <main className={style.content_padding}>
                     {/**** Carrousel ****/}
