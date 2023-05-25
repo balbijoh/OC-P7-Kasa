@@ -1,10 +1,12 @@
 import { useState } from "react"
 import Image from 'next/image'
+
 import ArrowBack from '../../assets/icon_arrow-back.svg'
 import ArrowForward from '../../assets/icon_arrow-forward.svg'
+
 import style from '../../css/main.module.css'
 
-function Carousel({dwelling}) {
+function Carousel({ dwelling }) {
     const [dwellingPicture, setDwellingPicture] = useState(0)
 
     // Gère le click sur la flèche "Image suivante"

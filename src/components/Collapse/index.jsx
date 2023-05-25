@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import Image from 'next/image'
+
 import ArrowUp from '../../assets/icon_arrow-up.svg'
 import ArrowDown from '../../assets/icon_arrow-down.svg'
+
 import style from '../../css/main.module.css'
 
-function Collapse({title, content}) {
+function Collapse({ title, content }) {
     const [collapse, setCollapse] = useState('closed')
 
     // Gère l'état de l'expansion panel
@@ -22,12 +24,11 @@ function Collapse({title, content}) {
                 <h2>{title}</h2>
                     <Image src={collapse === 'closed' ? ArrowDown : ArrowUp}
                         className={style.collapse_icon}
-                        alt={`Afficher/masquer le contenu`} />
+                        alt={collapse === 'closed' ? `Afficher le contenu` : `Masquer le contenu`} />
             </div>
             
             {collapse === 'closed' ? (
-                <div className={style.collapse_content_hide}>
-                </div>
+                <></>
                 ) : (
                     <div className={style.collapse_content}>
                         <div>{content}</div>
